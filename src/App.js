@@ -1,4 +1,3 @@
-import logo from "./logo.svg"
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
@@ -17,7 +16,8 @@ import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
-import { API, Storage } from "aws-amplify";
+import Amplify, { API, Storage } from 'aws-amplify';
+
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
